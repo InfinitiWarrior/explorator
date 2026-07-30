@@ -1,0 +1,32 @@
+[workspace]
+resolver = "2"
+members = [
+    "explorator-core",
+    "explorator-plugins",
+    "explorator-api",
+    "explorator-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/InfinitiWarrior/explorator"
+
+[workspace.dependencies]
+explorator-core = { path = "explorator-core" }
+explorator-plugins = { path = "explorator-plugins" }
+
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "process", "time", "sync", "io-util", "fs", "net"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+petgraph = "0.6"
+uuid = { version = "1", features = ["v4", "serde"] }
+log = "0.4"
+env_logger = "0.11"
+clap = { version = "4", features = ["derive"] }
+axum = "0.7"
+tower = "0.4"
+rusqlite = { version = "0.31", features = ["bundled"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
