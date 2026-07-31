@@ -12,3 +12,4 @@ serde_json = { workspace = true }
 log = { workspace = true }
 reqwest = { workspace = true }
 uuid = { workspace = true }
+tokio-rustls = { workspace = true }
